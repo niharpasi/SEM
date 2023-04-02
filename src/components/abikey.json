@@ -1,0 +1,69 @@
+[
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "data",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "voltage",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "current",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "cost",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "dataCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_voltage",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_current",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_cost",
+          "type": "string"
+        }
+      ],
+      "name": "saveData",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
