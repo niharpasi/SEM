@@ -164,10 +164,12 @@ function Form() {
                     type="number"
                     name="voltage"
                     id="voltage"
-                    placeholder={firebaseData.Voltage}
+                    placeholder={
+                      firebaseData ? firebaseData.Voltage : "voltage"
+                    }
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required=""
-                    value={firebaseData.Voltage}
+                    value={firebaseData ? firebaseData.Voltage : 0}
                   />
                 </div>
                 <div>
@@ -181,10 +183,12 @@ function Form() {
                     type="number"
                     name="current"
                     id="current"
-                    placeholder={firebaseData.Current}
+                    placeholder={
+                      firebaseData ? firebaseData.Current : "Current"
+                    }
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required=""
-                    value={firebaseData.Current}
+                    value={firebaseData ? firebaseData.Current : 0}
                   />
                 </div>
                 <div>
@@ -198,10 +202,10 @@ function Form() {
                     type="number"
                     name="cost"
                     id="setText"
-                    placeholder={firebaseData.Cost}
+                    placeholder={firebaseData ? firebaseData.Cost : "Cost"}
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required=""
-                    value={firebaseData.Cost}
+                    value={firebaseData ? firebaseData.Cost : 0}
                   />
                 </div>
                 <div>
