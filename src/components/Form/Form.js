@@ -56,14 +56,14 @@ function Form() {
     },
   ];
   let contractAddress = "0x801F3179f35E68dfaB65eF41434d67971016392d";
-  const [errorMessage, setErrorMessage] = useState(null);
+  // const [errorMessage, setErrorMessage] = useState(null);
   const [defaultAccount, setDefaultAccount] = useState(null);
-  const [connButtonText, setConnButtonText] = useState("Connect Wallet");
+  // const [connButtonText, setConnButtonText] = useState("Connect Wallet");
 
-  const [currentContractVal, setCurrentContractVal] = useState(null);
-  const [uploadData, setuploadData] = useState([]);
-  const [provider, setProvider] = useState(null);
-  const [signer, setSigner] = useState(null);
+  // const [currentContractVal, setCurrentContractVal] = useState(null);
+  // const [uploadData, setuploadData] = useState([]);
+  // const [provider, setProvider] = useState(null);
+  // const [signer, setSigner] = useState(null);
   const [contract, setContract] = useState(null);
   const [firebaseData, setFirebaseData] = useState();
   const connectWalletHandler = (event) => {
@@ -72,14 +72,14 @@ function Form() {
         .request({ method: "eth_requestAccounts" })
         .then((result) => {
           accountChangedHandler(result[0]);
-          setConnButtonText("Wallet Connected");
+          // setConnButtonText("Wallet Connected");
         })
         .catch((error) => {
-          setErrorMessage(error.message);
+          // setErrorMessage(error.message);
         });
     } else {
       console.log("Need to install MetaMask");
-      setErrorMessage("Please install MetaMask browser extension to interact");
+      // setErrorMessage("Please install MetaMask browser extension to interact");
     }
     event.preventDefault();
   };
@@ -102,10 +102,10 @@ function Form() {
 
   const updateEthers = () => {
     let tempProvider = new ethers.providers.Web3Provider(window.ethereum);
-    setProvider(tempProvider);
+    // setProvider(tempProvider);
 
     let tempSigner = tempProvider.getSigner();
-    setSigner(tempSigner);
+    // setSigner(tempSigner);
 
     let tempContract = new ethers.Contract(contractAddress, abi, tempSigner);
     setContract(tempContract);
@@ -117,10 +117,10 @@ function Form() {
     contract.saveData(data.target.setText.value);
   };
 
-  const getCurrentVal = async () => {
-    let val = await contract.get();
-    setCurrentContractVal(val);
-  };
+  // const getCurrentVal = async () => {
+  //   let val = await contract.get();
+  //   // setCurrentContractVal(val);
+  // };
 
   const firebaseConfig = {
     apiKey: "AIzaSyDquzKVekhneVLHQ2Cw7YwB5I78CrljDEw",
